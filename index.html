@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MITE Smart Campus Locator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+</head>
+
+<body>
+
+    <header>
+        <h1>📍 MITE Campus Locator</h1>
+        <p>Find your destination around campus</p>
+    </header>
+
+    <main class="app-container">
+
+        <section class="sidebar">
+
+            <h2>Find a Location</h2>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search buildings..."
+            >
+
+            <select id="categoryFilter">
+                <option value="All">All Categories</option>
+                <option value="Academic">Academic</option>
+                <option value="Laboratory">Laboratory</option>
+                <option value="Food">Food</option>
+                <option value="Facilities">Facilities</option>
+            </select>
+
+            <button id="locateBtn">📍 My Location</button>
+
+            <button id="addLocationBtn">+ Add Campus Location</button>
+
+            <p id="status"></p>
+
+            <h3>Campus Locations</h3>
+
+            <div id="locationList"></div>
+
+        </section>
+
+        <section class="map-section">
+            <div id="map"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Smart Campus Locator | MITE</p>
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
